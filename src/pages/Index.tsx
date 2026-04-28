@@ -16,15 +16,29 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main>
-        <Hero />
+        <section id="top" aria-label="Hero">
+          <Hero />
+        </section>
         <SocialProof />
-        <Comparison />
-        <HowItWorks />
-        <Features />
+        <section id="comparison" aria-label="Why Syrin">
+          <Comparison />
+        </section>
+        <section id="how-it-works" aria-label="How it works">
+          <HowItWorks />
+        </section>
+        <section id="features" aria-label="Features">
+          <Features />
+        </section>
         <ImpactBar />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
+        <section id="testimonials" aria-label="Testimonials">
+          <Testimonials />
+        </section>
+        <section id="pricing" aria-label="Pricing">
+          <Pricing />
+        </section>
+        <section id="faq" aria-label="Frequently asked questions">
+          <FAQ />
+        </section>
         <FinalCTA />
       </main>
       <Footer />

@@ -1,0 +1,25 @@
+{
+  "name": "Syrin — AI Accountability Coach",
+  "short_name": "Syrin",
+  "description": "A 24/7 voice-first AI coach that plans your day, tracks your goals, and holds you accountable.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F0F9FF",
+  "theme_color": "#0EA5E9",
+  "categories": ["productivity", "lifestyle", "health"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,9 +1,41 @@
 import { Logo } from "./Logo";
 
 const cols = [
-  { title: "Product", links: ["Features", "Pricing", "Roadmap", "Changelog", "Status"] },
-  { title: "Company", links: ["About", "Blog", "Careers (We're hiring!)", "Press kit", "Contact"] },
-  { title: "Legal", links: ["Privacy", "Terms", "Security", "Cookie policy", "DPA"] },
+  {
+    title: "Product",
+    links: [
+      { label: "Features", href: "#features" },
+      { label: "How it works", href: "#how-it-works" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "FAQ", href: "#faq" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "#" },
+      { label: "Blog", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Press kit", href: "#" },
+      { label: "Contact", href: "mailto:hello@getsyrin.com" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
+      { label: "Security", href: "#" },
+      { label: "Cookie policy", href: "#" },
+    ],
+  },
+];
+
+const socials = [
+  { label: "X", href: "https://x.com/getsyrin" },
+  { label: "Instagram", href: "https://instagram.com/getsyrin" },
+  { label: "TikTok", href: "https://tiktok.com/@getsyrin" },
+  { label: "YouTube", href: "https://youtube.com/@getsyrin" },
 ];
 
 export const Footer = () => (
@@ -16,18 +48,33 @@ export const Footer = () => (
             The AI accountability partner that actually holds you to your word.
           </p>
           <div className="mt-5 flex gap-3 text-xs text-muted-foreground">
-            {["X", "Instagram", "TikTok", "YouTube"].map((s) => (
-              <a key={s} href="#" className="hover:text-foreground transition-colors">{s}</a>
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                {s.label}
+              </a>
             ))}
           </div>
         </div>
         {cols.map((c) => (
           <div key={c.title}>
-            <p className="text-xs uppercase tracking-wider font-semibold text-foreground mb-4">{c.title}</p>
+            <p className="text-xs uppercase tracking-wider font-semibold text-foreground mb-4">
+              {c.title}
+            </p>
             <ul className="space-y-3">
               {c.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{l}</a>
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {l.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -35,7 +82,7 @@ export const Footer = () => (
         ))}
       </div>
       <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row gap-3 justify-between text-xs text-muted-foreground">
-        <p>© 2026 SYRIN Inc. · Built with care · 🇨🇦</p>
+        <p>© {new Date().getFullYear()} Syrin Inc. · Built with care · 🇨🇦</p>
         <p>The AI that pushes back.</p>
       </div>
     </div>
