@@ -20,19 +20,19 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass" : "bg-transparent"
-      }`}
-    >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header className="fixed top-4 inset-x-0 z-50 px-4">
+      <nav
+        className={`mx-auto max-w-5xl rounded-2xl px-4 sm:px-5 h-14 flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "glass-strong" : "glass"
+        }`}
+      >
         <Logo />
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground-strong hover:text-foreground transition-colors"
             >
               {l.label}
             </a>
@@ -41,34 +41,34 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-2">
           <a
             href="#login"
-            className="text-sm font-medium px-4 py-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
+            className="text-sm font-medium px-4 py-2 rounded-xl text-foreground hover:bg-white/60 transition-colors"
           >
             Log in
           </a>
           <a
             href="#pricing"
-            className="text-sm font-medium px-4 py-2 rounded-lg bg-gradient-primary text-primary-foreground shadow-glow-soft hover:shadow-glow transition-shadow"
+            className="text-sm font-semibold px-4 py-2 rounded-xl bg-foreground text-background hover:opacity-90 transition-opacity shadow-glow-soft"
           >
-            Start free →
+            Start free
           </a>
         </div>
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </nav>
       {open && (
-        <div className="md:hidden glass border-t border-border">
+        <div className="md:hidden mt-2 mx-auto max-w-5xl glass-strong rounded-2xl">
           <div className="px-6 py-6 flex flex-col gap-4">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-base text-muted-foreground hover:text-foreground"
+                className="text-base text-muted-foreground-strong hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -76,9 +76,9 @@ export const Navbar = () => {
             <a href="#login" className="text-base font-medium text-foreground">Log in</a>
             <a
               href="#pricing"
-              className="text-center text-sm font-medium px-4 py-3 rounded-lg bg-gradient-primary text-primary-foreground"
+              className="text-center text-sm font-semibold px-4 py-3 rounded-xl bg-foreground text-background"
             >
-              Start free →
+              Start free
             </a>
           </div>
         </div>
