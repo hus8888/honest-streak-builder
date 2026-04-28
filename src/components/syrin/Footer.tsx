@@ -33,9 +33,6 @@ const cols = [
 
 const socials = [
   { label: "X", href: "https://x.com/getsyrin" },
-  { label: "Instagram", href: "https://instagram.com/getsyrin" },
-  { label: "TikTok", href: "https://tiktok.com/@getsyrin" },
-  { label: "YouTube", href: "https://youtube.com/@getsyrin" },
 ];
 
 export const Footer = () => (

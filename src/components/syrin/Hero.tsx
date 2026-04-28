@@ -27,7 +27,7 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-7 text-lg lg:text-xl text-muted-foreground-strong max-w-xl leading-relaxed font-light">
-              SYRIN is a 24/7 AI accountability layer that plans your day, tracks your goals, and refracts your chaos into sharp, actionable focus — built for founders who demand precision.
+              The AI accountability partner that holds you to your word. Plans your day, tracks your goals, calls out your excuses — over voice or text, around the clock.
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3">
@@ -35,37 +35,28 @@ export const Hero = () => {
                 href="#pricing"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-primary text-primary-foreground font-semibold shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-transform"
               >
-                Initialize your coach
+                Start free
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
-              <button className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl glass text-foreground font-semibold hover:bg-white/70 transition-colors">
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl glass text-foreground font-semibold hover:bg-white/70 transition-colors"
+              >
                 <Play className="w-4 h-4" fill="currentColor" />
-                Watch 60-sec demo
-              </button>
+                See how it works
+              </a>
             </div>
 
-            {/* Social proof row */}
-            <div className="mt-10 flex items-center gap-5">
-              <div className="flex -space-x-2">
-                {[
-                  "from-sky-400 to-indigo-500",
-                  "from-indigo-400 to-violet-500",
-                  "from-cyan-400 to-sky-500",
-                  "from-blue-400 to-indigo-500",
-                ].map((g, i) => (
-                  <div
-                    key={i}
-                    className={`w-9 h-9 rounded-full bg-gradient-to-br ${g} ring-2 ring-background`}
-                  />
-                ))}
+            {/* Trust row — honest, not faked */}
+            <div className="mt-10 flex items-center gap-5 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-success" />
+                Free forever plan
               </div>
-              <div className="text-sm">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-warning text-xs tracking-tight">★★★★★</span>
-                  <span className="font-semibold text-foreground">4.9</span>
-                </div>
-                <p className="text-xs text-muted-foreground">2,341 early users · Free forever plan</p>
-              </div>
+              <span className="text-border">·</span>
+              <div>No credit card required</div>
+              <span className="text-border hidden sm:inline">·</span>
+              <div className="hidden sm:block">Cancel anytime</div>
             </div>
           </div>
 

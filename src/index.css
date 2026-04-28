@@ -132,6 +132,24 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+
+  /* Anchor scroll offset so the fixed navbar doesn't cover section headings */
+  section[id] {
+    scroll-margin-top: 96px;
+  }
+
+  /* Premium focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* Native selection color matches the brand */
+  ::selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--foreground));
+  }
 }
 
 @layer utilities {

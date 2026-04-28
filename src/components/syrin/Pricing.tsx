@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Check, X, Shield } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
+import { SpotlightCard } from "./SpotlightCard";
 
 type Tier = {
   name: string;
@@ -39,9 +40,9 @@ const tiers: Tier[] = [
       { label: "3 push check-ins/day", included: true },
       { label: "Pattern detection", included: true },
       { label: "Progress dashboard", included: true },
-      { label: "All 8 coaching capabilities", included: true },
+      { label: "Full coaching depth — plan, push, pattern", included: true },
     ],
-    cta: "Get Pro",
+    cta: "Upgrade to Pro",
   },
   {
     name: "Elite",
@@ -53,10 +54,11 @@ const tiers: Tier[] = [
       { label: "Weekly deep-dive reports", included: true },
       { label: "Custom coaching plans", included: true },
       { label: "Priority voice (lower latency)", included: true },
-      { label: "Conversation history export", included: true },
       { label: "Calendar + fitness integrations", included: true },
+      { label: "Conversation history export", included: true },
+      { label: "API access (calendar, fitness)", included: true },
     ],
-    cta: "Go Elite",
+    cta: "Upgrade to Elite",
   },
 ];
 
@@ -101,16 +103,13 @@ export const Pricing = () => {
           {tiers.map((t) => {
             const price = annual ? t.yearly : t.monthly;
             return (
-              <div
+              <SpotlightCard
                 key={t.name}
-                className={`relative rounded-2xl p-8 border ${
-                  t.popular
-                    ? "border-primary/50 bg-card shadow-glow-soft"
-                    : "border-border bg-card"
-                }`}
+                highlight={t.popular}
+                className="p-8"
               >
                 {t.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-primary text-[10px] uppercase tracking-wider font-bold text-primary-foreground whitespace-nowrap">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-primary text-[10px] uppercase tracking-wider font-bold text-primary-foreground whitespace-nowrap z-10">
                     Most popular
                   </div>
                 )}
@@ -150,7 +149,7 @@ export const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </SpotlightCard>
             );
           })}
         </div>
