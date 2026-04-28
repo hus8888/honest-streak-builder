@@ -15,12 +15,12 @@ export const PhoneMockup = () => {
       <div className="absolute -inset-12 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
 
       {/* Phone frame */}
-      <div className="relative rounded-[3rem] bg-neutral-900 p-3 shadow-2xl border border-neutral-800">
-        <div className="rounded-[2.4rem] bg-background overflow-hidden border border-border relative">
+      <div className="relative rounded-[3rem] bg-slate-900 p-3 shadow-2xl border border-slate-800">
+        <div className="rounded-[2.4rem] bg-card overflow-hidden border border-border relative">
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 h-6 w-28 bg-black rounded-full z-10" />
 
-          <div className="pt-10 px-5 pb-6 min-h-[600px] bg-gradient-to-b from-background to-background-secondary/40">
+          <div className="pt-10 px-5 pb-6 min-h-[600px] bg-gradient-to-b from-card to-background-secondary/60">
             {/* Greeting */}
             <div className="mt-2">
               <p className="text-xs text-muted-foreground">Tuesday · April 28</p>

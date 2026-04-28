@@ -8,29 +8,29 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* SYRIN dark design system */
-    --background: 240 20% 5%;          /* #0A0A0F */
-    --background-secondary: 240 14% 9%; /* #13131A */
-    --foreground: 240 11% 96%;         /* #F5F5F7 */
+    /* SYRIN light professional design system — soft blue */
+    --background: 210 40% 98%;          /* #F5F8FC */
+    --background-secondary: 214 50% 95%; /* #E8F0FA */
+    --foreground: 222 47% 11%;          /* #0F172A */
 
-    --card: 240 14% 9%;
-    --card-foreground: 240 11% 96%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 240 14% 9%;
-    --popover-foreground: 240 11% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 262 83% 58%;            /* #7C3AED */
+    --primary: 217 91% 55%;             /* #2563EB */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 271 91% 65%;       /* #A855F7 */
+    --primary-glow: 213 94% 68%;        /* #60A5FA */
 
-    --secondary: 240 10% 15%;
-    --secondary-foreground: 240 11% 96%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 240 10% 12%;
-    --muted-foreground: 220 9% 65%;    /* #9CA3AF */
-    --muted-foreground-strong: 220 9% 75%;
+    --muted: 214 32% 93%;
+    --muted-foreground: 215 16% 47%;    /* #64748B */
+    --muted-foreground-strong: 215 25% 35%;
 
-    --accent: 262 83% 58%;
+    --accent: 217 91% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -39,20 +39,20 @@ All colors MUST be HSL.
     --success: 160 84% 39%;
     --warning: 38 92% 50%;
 
-    --border: 240 14% 14%;             /* #1F1F2A */
-    --input: 240 14% 14%;
-    --ring: 262 83% 58%;
+    --border: 214 32% 88%;              /* #D6E0EC */
+    --input: 214 32% 88%;
+    --ring: 217 91% 55%;
 
     --radius: 1rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(271 91% 65%));
-    --gradient-hero: radial-gradient(ellipse at top, hsl(262 83% 58% / 0.18), transparent 60%),
-                     radial-gradient(ellipse at bottom right, hsl(220 90% 50% / 0.12), transparent 55%);
-    --gradient-mesh: conic-gradient(from 180deg at 50% 50%, hsl(262 83% 58% / 0.25), hsl(220 90% 50% / 0.15), hsl(280 90% 60% / 0.2), hsl(262 83% 58% / 0.25));
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%), hsl(213 94% 68%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(217 91% 55% / 0.14), transparent 60%),
+                     radial-gradient(ellipse at bottom right, hsl(199 89% 60% / 0.10), transparent 55%);
+    --gradient-mesh: conic-gradient(from 180deg at 50% 50%, hsl(217 91% 55% / 0.18), hsl(199 89% 60% / 0.12), hsl(230 90% 65% / 0.15), hsl(217 91% 55% / 0.18));
 
-    --shadow-glow: 0 0 60px hsl(262 83% 58% / 0.4);
-    --shadow-glow-soft: 0 0 40px hsl(262 83% 58% / 0.25);
-    --shadow-card: 0 8px 24px -8px hsl(240 30% 2% / 0.6);
+    --shadow-glow: 0 10px 40px -10px hsl(217 91% 55% / 0.45);
+    --shadow-glow-soft: 0 8px 30px -10px hsl(217 91% 55% / 0.25);
+    --shadow-card: 0 8px 24px -12px hsl(217 50% 30% / 0.18);
 
     --transition-smooth: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -121,8 +121,8 @@ All colors MUST be HSL.
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     background-image:
-      radial-gradient(circle at 20% 0%, hsl(262 83% 58% / 0.08), transparent 40%),
-      radial-gradient(circle at 80% 100%, hsl(220 90% 50% / 0.06), transparent 40%);
+      radial-gradient(circle at 20% 0%, hsl(217 91% 55% / 0.10), transparent 40%),
+      radial-gradient(circle at 80% 100%, hsl(199 89% 60% / 0.08), transparent 40%);
     background-attachment: fixed;
   }
 
@@ -147,16 +147,16 @@ All colors MUST be HSL.
   .shadow-glow-soft { box-shadow: var(--shadow-glow-soft); }
 
   .glass {
-    background: hsl(240 14% 9% / 0.6);
+    background: hsl(0 0% 100% / 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsl(240 14% 14% / 0.8);
+    border: 1px solid hsl(214 32% 88% / 0.8);
   }
 
   .grid-bg {
     background-image:
-      linear-gradient(hsl(240 14% 14% / 0.6) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(240 14% 14% / 0.6) 1px, transparent 1px);
+      linear-gradient(hsl(214 32% 80% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(214 32% 80% / 0.5) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   }
